@@ -980,6 +980,7 @@ impl ProtocolConfig {
                 let mut cfg = Self::get_for_version_impl(version - 1);
                 // TODO(devx): Bump this in next PR
                 cfg.gas_cost_table_version = Some(1);
+                cfg.gas_model_version = Some(4);
                 cfg
             }
             // Use this template when making changes:
