@@ -45,7 +45,7 @@ export function ObjectFieldsCard({ id }: ObjectFieldsProps) {
         module: moduleName,
         struct: functionName,
         onSuccess: (data) => {
-            if (data?.fields) {
+            if (data?.fields && activeFieldName === '') {
                 setActiveFieldName(data.fields[0].name);
             }
         },
