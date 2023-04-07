@@ -6,7 +6,6 @@ import { useGetObject, useGetNormalizedMoveStruct } from '@mysten/core';
 import {
     getObjectFields,
     getObjectType,
-    normalizeSuiObjectId,
 } from '@mysten/sui.js';
 import clsx from 'clsx';
 import { useState } from 'react';
