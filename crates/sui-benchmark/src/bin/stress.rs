@@ -6,8 +6,11 @@ use clap::*;
 
 use prometheus::Registry;
 use rand::seq::SliceRandom;
+use rand::Rng;
+use tokio::time::sleep;
 
 use std::sync::Arc;
+use std::time::Duration;
 use sui_benchmark::drivers::bench_driver::BenchDriver;
 use sui_benchmark::drivers::driver::Driver;
 use sui_benchmark::drivers::BenchmarkCmp;
@@ -107,6 +110,11 @@ async fn main() -> Result<()> {
     };
     let stress_stat_collection = opts.stress_stat_collection;
     barrier.wait().await;
+
+    // sleep with a random delay to avoid conflicts.
+    let delay = Duration::from_secs(60) * rand::thread_rng().gen_range(0..12);
+    sleep(delay).await;
+
     // create client runtime
     let client_runtime = Builder::new_multi_thread()
         .enable_all()
