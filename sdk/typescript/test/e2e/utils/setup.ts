@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-import { expect } from 'vitest';
+import { beforeEach, expect, vi } from 'vitest';
 import { execSync } from 'child_process';
 import tmp from 'tmp';
 
@@ -78,9 +78,7 @@ export function getProvider(): JsonRpcProvider {
       fullnode: DEFAULT_FULLNODE_URL,
       faucet: DEFAULT_FAUCET_URL,
     }),
-    {
-      skipDataValidation: false,
-    },
+    {},
   );
 }
 
