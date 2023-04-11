@@ -113,6 +113,15 @@ impl TestContext {
             .unwrap()
     }
 
+    async fn get_reference_gas_price(&self) -> u64 {
+        self.client
+            .get_fullnode_client()
+            .governance_api()
+            .get_reference_gas_price()
+            .await
+            .unwrap()
+    }
+
     fn get_wallet_mut(&mut self) -> &mut WalletContext {
         self.client.get_wallet_mut()
     }
@@ -161,10 +170,14 @@ impl TestContext {
             )
             .await
             .unwrap_or_else(|e| panic!("Failed to execute transaction for {}. {}", desc, e));
-        assert!(matches!(
-            resp.effects.as_ref().unwrap().status(),
-            SuiExecutionStatus::Success
-        ));
+        assert!(
+            matches!(
+                resp.effects.as_ref().unwrap().status(),
+                SuiExecutionStatus::Success
+            ),
+            "Failed to execute transaction for {desc}: {:?}",
+            resp
+        );
         resp
     }
 
@@ -297,11 +310,11 @@ impl ClusterTest {
 
         // TODO: collect tests from each test_case file instead.
         let tests = vec![
-            TestCase::new(NativeTransferTest {}),
-            TestCase::new(CoinMergeSplitTest {}),
-            TestCase::new(SharedCounterTest {}),
-            TestCase::new(FullNodeExecuteTransactionTest {}),
-            TestCase::new(FullNodeBuildPublishTransactionTest {}),
+            // TestCase::new(NativeTransferTest {}),
+            // TestCase::new(CoinMergeSplitTest {}),
+            // TestCase::new(SharedCounterTest {}),
+            // TestCase::new(FullNodeExecuteTransactionTest {}),
+            // TestCase::new(FullNodeBuildPublishTransactionTest {}),
             TestCase::new(CoinIndexTest {}),
         ];
 

@@ -2906,6 +2906,7 @@ impl AuthorityState {
                     }
                 })
                 .collect::<WrittenObjects>();
+            println!("@@@@@@@@@@@@@@@@@@ inner_temporary_store objects: {:?}", inner_temporary_store.objects);
             let input_coin_objects = inner_temporary_store
                 .objects
                 .iter()
@@ -2917,6 +2918,7 @@ impl AuthorityState {
                     }
                 })
                 .collect::<ObjectMap>();
+            println!("@@@@@@@@@@@@@@@@@@ input coin objects: {:?}, written coin objects: {:?}", input_coin_objects, written_coin_objects);
             Some((input_coin_objects, written_coin_objects))
         };
 

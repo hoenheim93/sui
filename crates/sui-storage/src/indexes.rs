@@ -216,7 +216,8 @@ impl IndexStore {
 
         // Index coin info
         let (input_coins, written_coins) = tx_coins.unwrap();
-
+        println!("@@@@@@@@@@@@@@@@@@ input coins: {:?}", input_coins);
+        println!("@@@@@@@@@@@@@@@@@@ written coins: {:?}", written_coins);
         // 1. Delete old owner if the object is deleted or transferred to a new owner,
         // by looking at `object_index_changes.deleted_owners`.
         // Objects in `deleted_owners` must be owned by `Owner::Address` befoer the tx,
