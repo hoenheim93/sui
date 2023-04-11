@@ -32,10 +32,3 @@ export const Default: StoryObj<TabGroupProps> = {
         </TabGroup>
     ),
 };
-
-export const Large: StoryObj<TabGroupProps> = {
-    ...Default,
-    args: {
-        size: 'lg',
-    },
-};

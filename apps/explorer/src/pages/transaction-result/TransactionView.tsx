@@ -189,7 +189,7 @@ export function TransactionView({
                     </div>
                 )}
             </div>
-            <TabGroup size="lg">
+            <TabGroup>
                 <TabList>
                     <Tab>Details</Tab>
                     {hasEvents && <Tab>Events</Tab>}

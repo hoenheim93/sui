@@ -122,7 +122,7 @@ export default function EpochDetail() {
                 ) : null}
             </div>
 
-            <TabGroup size="lg">
+            <TabGroup>
                 <TabList>
                     <Tab>Checkpoints</Tab>
                     <Tab>Participating Validators</Tab>

@@ -98,7 +98,7 @@ function PkgModuleViewWrapper({ id, modules }: Props) {
             key="bytecode"
             className="grow overflow-auto border-gray-45 pt-5 md:pl-7"
         >
-            <TabGroup size="md">
+            <TabGroup>
                 <TabList>
                     <Tab>Bytecode</Tab>
                 </TabList>
@@ -119,7 +119,7 @@ function PkgModuleViewWrapper({ id, modules }: Props) {
             key="execute"
             className="grow overflow-auto border-gray-45 pt-5 md:pl-7"
         >
-            <TabGroup size="md">
+            <TabGroup>
                 <TabList>
                     <Tab>Execute</Tab>
                 </TabList>

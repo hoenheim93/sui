@@ -49,7 +49,7 @@ function PkgView({ data }: { data: DataType }) {
     return (
         <div>
             <div>
-                <TabGroup size="lg">
+                <TabGroup>
                     <TabList>
                         <Tab>Details</Tab>
                     </TabList>

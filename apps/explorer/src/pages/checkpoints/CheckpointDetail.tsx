@@ -36,7 +36,7 @@ export default function CheckpointDetail() {
         <div className="flex flex-col space-y-12">
             <PageHeader title={data.digest} type="Checkpoint" />
             <div className="space-y-8">
-                <TabGroup as="div" size="lg">
+                <TabGroup as="div">
                     <TabList>
                         <Tab>Details</Tab>
                         {/* TODO: Get validator signatures */}
@@ -97,7 +97,7 @@ export default function CheckpointDetail() {
                         </TabPanel>
                     </TabPanels>
                 </TabGroup>
-                <TabGroup as="div" size="lg">
+                <TabGroup as="div">
                     <TabList>
                         <Tab>Gas & Storage Fee</Tab>
                     </TabList>
@@ -131,7 +131,7 @@ export default function CheckpointDetail() {
                     </TabPanels>
                 </TabGroup>
 
-                <TabGroup as="div" size="lg">
+                <TabGroup as="div">
                     <TabList>
                         <Tab>Checkpoint Transaction Blocks</Tab>
                     </TabList>

@@ -73,7 +73,7 @@ export function TokenView({ data }: { data: DataType }) {
 
     return (
         <div className="flex flex-col flex-nowrap gap-14">
-            <TabGroup size="lg">
+            <TabGroup>
                 <TabList>
                     <Tab>Details</Tab>
                 </TabList>
