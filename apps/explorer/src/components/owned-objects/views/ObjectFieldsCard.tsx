@@ -3,10 +3,7 @@
 
 import { Combobox } from '@headlessui/react';
 import { useGetObject, useGetNormalizedMoveStruct } from '@mysten/core';
-import {
-    getObjectFields,
-    getObjectType,
-} from '@mysten/sui.js';
+import { getObjectFields, getObjectType } from '@mysten/sui.js';
 import clsx from 'clsx';
 import { useState } from 'react';
 
